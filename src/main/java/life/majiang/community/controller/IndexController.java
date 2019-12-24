@@ -1,6 +1,7 @@
 package life.majiang.community.controller;
 
 import life.majiang.community.dto.PageinationDTO;
+import life.majiang.community.mapper.QuestionMapper;
 import life.majiang.community.mapper.UserMapper;
 import life.majiang.community.model.User;
 import life.majiang.community.service.QuestionService;
@@ -45,6 +46,8 @@ public class IndexController {
 
         PageinationDTO pageination = questionService.list(page,size);
         model.addAttribute("pageination",pageination);
+
+
 
         return "index";
     }
